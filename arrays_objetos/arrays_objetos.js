@@ -29,6 +29,7 @@ for (let i = 0; i < alunes.length; i++) {
 }
 
 // iterando um array com o forEach(myFunction)
+// a partir da lista alunes, para cada elemento execute a função mostrarElemento()
 console.log("UTILIZANDO O forEach() para alunes")
 alunes.forEach(mostrarElemento)
 
@@ -37,6 +38,7 @@ let professores = ["Mari", "Adriano", "Ana Flávia", "Sérgio"]
 professores.forEach(mostrarElemento)
 
 // callback: função a ser chamada quando um certo evento é disparado
+// pode receber o elemento da vez, sua posição e também o próprio array
 function mostrarElemento(elemento, index){
   console.log(`valor do elemento na posição ${index}: ${elemento}`)
 }
@@ -52,9 +54,9 @@ console.log(filtrado)
 
 filtrado.forEach(mostrarElemento)
 
-// callback para realizar o filtro
+// callback para realizar o filtro - RETORNA TRUE OU FALSE
 function checkAdult(age) {
-  return age >= 18;
+  return age >= 18; // comparação: retorna um booleano/lógico (true ou false)
 }
 
 
@@ -104,19 +106,26 @@ console.log(`Alune ${alune3.nome} matriculade no curso ${alune3.curso}`)
 console.log(`Alune ${alune4.nome} matriculade no curso ${alune4.curso}`)
 
 // arrays de objetos
+// let objAlunes = [alune1, alune2, alune3, alune4]
 let objAlunes = []
+// push(): insere um item ao final da lista
+objAlunes.push(alune4)
+objAlunes.push(alune4)
 objAlunes.push(alune1)
 objAlunes.push(alune2)
 objAlunes.push(alune3)
-objAlunes.push(alune4)
-console.log(`array de objetos alunes: ${objAlunes}`)
+
+
+console.log(objAlunes)
 
 objAlunes.forEach(mostrarObj)
 
-function mostrarObj(elemento, index){
-  console.log(`nome do alune na posição ${index}: ${elemento.nome}`)
-  console.log(`curso do alune na posição ${index}: ${elemento.curso}`)
-  console.log(`modulo do alune na posição ${index}: ${elemento.modulo}`)
+// a nossa linda callback para cuidar de cada objeto da lista
+function mostrarObj(elemento, pos){
+  console.log(`posição ${pos}`)
+  console.log(`nome do alune: ${elemento.nome}`)
+  console.log(`curso do alune: ${elemento.curso}`)
+  console.log(`modulo do alune: ${elemento.modulo}`)
 }
 
 // funções/métodos
