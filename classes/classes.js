@@ -32,6 +32,7 @@ class Carro {
     this.ano = novoAno;
   }
 
+  // métodos: funções que todo objeto criado com essa classe poderá executar
   calculaIdade(anoAtual) {
     return anoAtual - this.ano;
   }
