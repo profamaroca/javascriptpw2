@@ -47,3 +47,4 @@ alunes.forEach(mostraAlune);
 // montar um array de objetos pessoas como os da lousa
 // usar o forEach para mostrar apenas pessoas com 18 anos ou mais
 
+
